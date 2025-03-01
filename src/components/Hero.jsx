@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className="bg-gradient-to-r from-blue-500
           to-pink-500 bg-clip-text text-transparent
           opacity-80 text-3xl font-semibold transition-all duration-300
-          hover:opacity-100"> Emmanuel Nwabuogor  This what am working on </h1>
+          hover:opacity-100"> Emmanuel Nwabuogor </h1>
           <h3 className="bg-gradient-to-r from-pink-500
           to-blue-500 bg-clip-text text-transparent text-5xl font-light md:text-3xl">frontend engineer</h3>
           <p className="md:text-base text-pretty text-sm text-gray-400 ">
