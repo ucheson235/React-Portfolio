@@ -91,85 +91,94 @@ const Navbar = () => {
 					</li>
 				</a>
 			</ul>
-			{isOpen ? <BiX className="block md:hidden text-4xl" onClick={menuOpen} />
-       : 
-       <BiMenu className="block md:hidden text-4xl" onClick={menuOpen} />
-      }
-
-      {isOpen && (<div className={`fixed right-0 top-[84px] flex
-        h-screen w-1/2 flex-col items-start justify-start
-        gap-10 border-1 border-gray-800 bg-black/90 p-12 ${isOpen ? "block" : "hidden" }`}>
-        <ul className="flex flex-col gap-8">
-				<a
-					href="#home"
-					className="cursor-pointer opacity-70
-          transition-all duration-300 hover:opacity-70"
+			{
+				isOpen ? (
+				  <BiX className="block md:hidden text-4xl" onClick={menuOpen} />
+				) : (
+				  <BiMenu className="block md:hidden text-4xl" onClick={menuOpen} />
+				)
+			  }
+			  
+			  {isOpen && (
+				<div
+				  className={`fixed right-0 top-[84px] flex h-screen w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black/90 p-12 ${
+					isOpen ? "block" : "hidden"
+				  }`}
 				>
-					<li>Home</li>
-				</a>
-				<a
-					href="#tech"
-					className="cursor-pointer opacity-70
-          transition-all duration-300 hover:opacity-70"
-				>
-					<li>Tech</li>
-				</a>
-				<a
-					href="#projects"
-					className="cursor-pointer opacity-70
-          transition-all duration-300 hover:opacity-70"
-				>
-					<li>Projects</li>
-				</a>
-				<a
-					href="#contact"
-					className="cursor-pointer opacity-70
-          transition-all duration-300 hover:opacity-70"
-				>
-					<li>Contact</li>
-				</a>
-			</ul>
-      <ul className="flex flex-wrap gap-5">
-				<a href="#">
-					<li
-						className="cursor-pointer text-xl opacity-70
-          transition-all duration-300 hover:text-red-500
-          hover:opacity-100"
+				  <ul className="flex flex-col gap-8">
+					<a
+					  href="#home"
+					  className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-70"
+					  onClick={() => {
+						menuOpen(); // Close the menu
+						setTimeout(() => {
+						  document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+						}, 100); // Add a small delay to ensure the menu closes before scrolling
+					  }}
 					>
+					  <li>Home</li>
+					</a>
+					<a
+					  href="#tech"
+					  className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-70"
+					  onClick={() => {
+						menuOpen(); // Close the menu
+						setTimeout(() => {
+						  document.getElementById("tech").scrollIntoView({ behavior: "smooth" });
+						}, 100);
+					  }}
+					>
+					  <li>Tech</li>
+					</a>
+					<a
+					  href="#projects"
+					  className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-70"
+					  onClick={() => {
+						menuOpen(); // Close the menu
+						setTimeout(() => {
+						  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+						}, 100);
+					  }}
+					>
+					  <li>Projects</li>
+					</a>
+					<a
+					  href="#contact"
+					  className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-70"
+					  onClick={() => {
+						menuOpen(); // Close the menu
+						setTimeout(() => {
+						  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+						}, 100);
+					  }}
+					>
+					  <li>Contact</li>
+					</a>
+				  </ul>
+				  <ul className="flex flex-wrap gap-5">
+					<a href="#">
+					  <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
 						<BsYoutube />
-					</li>
-				</a>
-				<a href="https://x.com/ucheson235" target="black">
-					<li
-						className="cursor-pointer text-xl opacity-70
-          transition-all duration-300 hover:text-sky-500
-          hover:opacity-100"
-					>
+					  </li>
+					</a>
+					<a href="https://x.com/ucheson235" target="_blank" rel="noopener noreferrer">
+					  <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
 						<BsTwitter />
-					</li>
-				</a>
-				<a  href="https://www.linkedin.com/in/emmanuel-nwabuogor-39932a346/" target="black">
-					<li
-						className="cursor-pointer text-xl opacity-70
-          transition-all duration-300 hover:text-blue-500
-          hover:opacity-100"
-					>
+					  </li>
+					</a>
+					<a href="https://www.linkedin.com/in/emmanuel-nwabuogor-39932a346/" target="_blank" rel="noopener noreferrer">
+					  <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
 						<BsLinkedin />
-					</li>
-				</a>
-				<a href="https://github.com/ucheson235" target="black">
-					<li
-						className="cursor-pointer text-xl opacity-70
-          transition-all duration-300 hover:text-orange-500
-          hover:opacity-100"
-					>
+					  </li>
+					</a>
+					<a href="https://github.com/ucheson235" target="_blank" rel="noopener noreferrer">
+					  <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
 						<BsGithub />
-					</li>
-				</a>
-			</ul>
-        
-         
-        </div>)}
+					  </li>
+					</a>
+				  </ul>
+				</div>
+			  )}
 		</nav>
 	);
 };
