@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ucheson235.github.io/React-Portfolio",
   "scripts": {
-    "homepage": "https://ucheson235.github.io/React-Portfolio",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
